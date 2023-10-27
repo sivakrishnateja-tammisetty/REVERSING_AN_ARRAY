@@ -20,3 +20,37 @@ int main() {
   p_reverse(a,n);
     return 0;
 }
+
+
+                           //REVERSE AN ARRAY IN PLACE
+
+
+
+#include <iostream>
+using namespace std;
+void reverse_an_array_inplace(int *a,int n)
+{
+    int start=0;
+    int end=n-1;
+    while(start<end)
+    {
+        swap(a[start],a[end]);
+        start++;
+        end--;
+    }
+}
+void display(int *a,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+}
+int main() {
+  
+  int a[]={1,2,3,4,5};
+  int n=sizeof(a)/sizeof(a[0]);
+  reverse_an_array_inplace(a,n);
+  display(a,n);
+    return 0;
+}
